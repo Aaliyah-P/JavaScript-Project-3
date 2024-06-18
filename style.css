@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jaro:opsz@6..72&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jaro", sans-serif;
+}
+/* -----------------------------------------Toggle background theme light/dark--------------------------------------------------------------------*/
+:root{
+  --grid-unit: 1rem;
+  --border-radius-base: 0.5rem;
+}
+
+[data-theme="light"]{
+  --color-bg: #f1f1e9;
+  --color-fg: #000000;
+}
+
+[data-theme="dark"]{
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+
+body{
+ background-color: var(--color-bg);
+ color: var(--color-fg) ;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+/*---------------------------------------------------------- Nav contents----------------------------------------------------------------*/
+.container{
+display: flex;
+align-items: center;
+justify-content: flex-end;
+flex-direction: row;
+margin-top: 10px;
+margin: 20px;
+width: 100%;
+}
+
+li{
+ position: relative;
+ display: inline-block;
+ margin: 30px;
+ list-style: none;
+ cursor: pointer;
+ padding: 5px;
+}
+li:hover{
+ transform: translateY(4px);
+ font-weight: bold;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li {
+  margin: 5px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #878686;
+}
+
+/* ------------------------------------------------------------main------------------------------------------------------------------------------------------------*/
+.heading{
+ display: flex;
+ flex-direction: column;
+ margin-top: 20px;
+ text-align: center;
+}
+
+h1, h2{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 30px;
+font-size: 35px;
+}
+
+.userInput{
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2rem;
+margin: 20px auto;
+width: 80%;
+max-width: 600px;
+flex-direction: column;
+}
+
+.userInput p {
+  margin-bottom: 10px;
+}
+
+.mood, .energy, .music, .btn {
+  margin-bottom: 20px;
+}
+
+.mood select, .energy input[type="radio"], .music input[type="radio"] {
+  margin-right: 10px;
+}
+
+.result-style {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #494747;
+  border-radius: 5px;
+  
+}
+
+.result-style h2 {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.result-style img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.mood, p{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.energy{
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #f00, #ff0, #0f0);
+  border-radius: 10px;
+}
+
+.energy input{
+  display: none;
+  
+}
+
+.energy label{
+  display: block;
+  cursor: pointer;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  background: #fff;
+  color: #000;
+  border-right: 1px solid #000;
+}
+
+.energy input[type="radio"]:hover ~ label{
+  background: transparent;
+}
+.energy input[type="radio"]:checked ~ label{
+  background: transparent;
+}
+
+
+.music{
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 10px;
+  justify-content: center;
+  
+}
+
+.btn{
+ display: flex;
+ justify-content: center;
+ margin-top: 50px;
+}
+
+.btn-style{
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+.btn-style:hover{
+ box-shadow: 0 0 5px 5px;
+}
+
+
+
+button{
+  cursor: pointer;
+  background-color: #727070;
+  padding: 1px;
+  color: #e7e7df;
+}
+
+
+body{
+margin: 40px;
+
+}
+
+
+/*-------------------------- Media query for small devices ------------------------------- */
+
+@media only screen and (max-width:600px){
+body, p{
+ font-size: 20px;
+}
+
+h1, h2{
+  font-size: 25px;
+}
+
+.energy label{
+ font-size: 20px;
+ width: 40px;
+}
+
+input[name="music"]{
+  transform: scale(0.5);
+  width: 40px;
+}
+}

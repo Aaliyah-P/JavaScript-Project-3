@@ -1,0 +1,16 @@
+a{
+text-decoration: none;
+font-size: 25px;
+}
+  
+ p{
+  font-size: 20px;
+ } 
+
+ button{
+  cursor: pointer;
+  background-color: #727070;
+  padding: 7px;
+  color: #e7e7df;
+}
+

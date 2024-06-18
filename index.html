@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <title>Dance Style Selector</title>
+</head>
+<body>
+  <!-- Create a div for the entire layout -->
+  <div class="container">
+    <!-- Nav system for about and help also toggle button for light/dark mode option -->
+    <ul class="nav">
+      <li><a href="./ABOUT.html">ABOUT</a></li>
+      <li><a href="./HELP.html">HELP?</a></li>
+      <li>
+        <button type="button" data-theme-toggle aria-label="Change to light theme">
+          <i class="fa-solid fa-power-off"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+<!-- Main heading and synopsis -->
+ <div class="container2">
+  <div class="heading">
+    <h1>Welcome To DSS</h1>
+    <h2>Find Your Rhythm: Discover the Perfect Dance Style for you!</h2>
+  </div>
+<!-- form element for user input (select/option) for mood -->
+  <div class="userInput">
+    <form action="#" id="styleform">
+      <p>What kind of mood are you in currently?</p>
+      <div class="mood">
+        <label for="mood">Mood Options:</label>
+        <select id="mood" name="mood">
+          <option value="select">Select (Option)</option>
+          <option value="Calm">Calm</option>
+          <option value="Happy">Happy</option>
+          <option value="Mad">Mad</option>
+          <option value="Inspired">Inspired</option>
+          <option value="Sad">Sad</option>
+          <option value="Energetic">Energetic</option>
+          <option value="Lonely">Lonely</option>
+        </select>
+      </div>
+<!-- radio type to select energy level from 1-10 / create CSS level up/down bar -->
+      <p>How would you rate your energy level (1-10)?</p>
+      <div class="energy">
+        <input type="radio" id="energy10" name="energy" value="10"><label for="energy10">10</label>
+        <input type="radio" id="energy9" name="energy" value="9"><label for="energy9">9</label>
+        <input type="radio" id="energy8" name="energy" value="8"><label for="energy8">8</label>
+        <input type="radio" id="energy7" name="energy" value="7"><label for="energy7">7</label>
+        <input type="radio" id="energy6" name="energy" value="6"><label for="energy6">6</label>
+        <input type="radio" id="energy5" name="energy" value="5"><label for="energy5">5</label>
+        <input type="radio" id="energy4" name="energy" value="4"><label for="energy4">4</label>
+        <input type="radio" id="energy3" name="energy" value="3"><label for="energy3">3</label>
+        <input type="radio" id="energy2" name="energy" value="2"><label for="energy2">2</label>
+        <input type="radio" id="energy1" name="energy" value="1"><label for="energy1">1</label>
+      </div>
+      <!-- radio button to select one music genre  -->
+      <p>Please select ONE genre of music</p>
+      <div class="music">
+        <input type="radio" id="music10" name="music" value="Pop"><label for="music10">Pop</label>
+        <input type="radio" id="music9" name="music" value="Rock"><label for="music9">Rock</label>
+        <input type="radio" id="music8" name="music" value="R&B"><label for="music8">R&B</label>
+        <input type="radio" id="music7" name="music" value="HipHop"><label for="music7">Hip-Hop</label>
+        <input type="radio" id="music6" name="music" value="Jazz"><label for="music6">Jazz</label>
+        <input type="radio" id="music5" name="music" value="Blues"><label for="music5">Blues</label>
+        <input type="radio" id="music4" name="music" value="Electronic"><label for="music4">Electronic</label>
+        <input type="radio" id="music3" name="music" value="House"><label for="music3">House</label>
+        <input type="radio" id="music2" name="music" value="Classical"><label for="music2">Classical</label>
+        <input type="radio" id="music1" name="music" value="Indie"><label for="music1">Indie</label>
+      </div>
+      
+<!-- button to get the suggested dance style and second button to reset the page  -->
+      <div class="btn">
+        <button type="button" class="btn-style" onclick="suggestDanceStyle()">Get Dance Style</button></div>
+        <div class="btn">
+        <button type="button" class="btn-style" onclick="resetSuggestions()">Reset</button>
+      </div>
+    </form>
+    <div class="result-style" id="result">
+      <!-- Suggested dance style will be displayed here -->
+    </div>
+  </div>
+</div>
+</body>
+</html>
